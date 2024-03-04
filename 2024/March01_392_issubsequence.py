@@ -90,14 +90,10 @@ class Solution:
         pointer_s, pointer_t = 0, 0
         # Use while loop to iterate through until we hit the end of the longer sequence
         while (pointer_s < len(s)) and (pointer_t < len(t)):
-            print("s", s[pointer_s], pointer_s)
-            print("t", t[pointer_t], pointer_t)
             if s[pointer_s] == t[pointer_t]:
                 pointer_s += 1
             
             pointer_t += 1
-
-
 
         if pointer_s == len(s):
             return True
@@ -127,3 +123,11 @@ expected = True
 result = Solution().isSubsequence(s, t)
 print(f"Result: {result}")
 print(f"Expected: {expected}")
+
+"""
+Runtime 39ms
+Beats 38.24% of users with Python3
+
+Memory 16.67MB
+Beats 60.18% of users with Python3
+"""
